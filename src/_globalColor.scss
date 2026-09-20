@@ -1,0 +1,90 @@
+/* Change colors in this file to style to your needs on a global level. 
+Certain colors are used for different and multiply types of elements. 
+For greater control over colors visit each components .scss file. */
+
+// button colors
+$buttonColor: #6366f1;
+$buttonHover: #4f46e5;
+$topButtonHover: #1e293b;
+
+// text colors light theme
+$titleColor: #0f172a;
+$textColor: #1e293b;
+$subTitle: #64748b;
+$cardSubtitle: #475569;
+$talkCardSubTitle: #64748b;
+$blogCardTitleColor: #0f172a;
+
+// text color dark theme
+$textColorDark: #f1f5f9;
+
+// toggle switch colors
+$toggleCheck: #6366f1;
+$toggleSwitchSliderBG: #334155;
+
+// githubRepo specific colors
+$githubRepoCardLanguageColorBG: #6366f1;
+$githubRepoCardColor: #94a3b8;
+$githubRepoCardRepoCardStatsColor: #cbd5e1;
+$githubRepoCardRepoNameColor: #f8fafc;
+$githubProfileCardLocationTS: #e2e8f0;
+$githubProfileCardBorder: #6366f1;
+
+// light background colors
+$lightBackground1: #ffffff;
+$lightBackground2: #f8fafc;
+$lightBackground3: #f1f5f9;
+$blogCardContainerColor: #1e293b;
+// dark background colors
+$darkBackground: #0b0f17;
+
+// light theme box shadows
+$lightBoxShadowDark: rgba(0, 0, 0, 0.08);
+$lightBoxShadow: rgba(0, 0, 0, 0.05);
+$lightBoxShadowDarker: rgba(0, 0, 0, 0.12);
+
+// dark theme box shadows
+$darkBoxShadow: #d9dbdf;
+$darkBoxShadow2: #ffffff;
+
+// linear gradients
+$experienceCardBlurredDivLG: linear-gradient(
+  rgba(0, 0, 0, 0.4),
+  rgba(0, 0, 0, 0.2)
+);
+$experienceCardBannerLG: linear-gradient(
+  rgba(0, 0, 0, 0.7),
+  rgba(0, 0, 0, 0.5)
+);
+
+// borders
+$progressBarBackground: rgb(243, 239, 239);
+$lightBorder1: rgba(211, 211, 211, 0.397);
+$educationCardBorder: #a9a7f9;
+
+// hovers
+$achievementCertificateCardHoverDark: rgba(255, 255, 255, 0.2);
+$blogCardHoverSmallColor: rgba(255, 255, 255, 0.8);
+$headerHoverBG: #f4f4f4;
+$contactDetailHoverTS: #b5b5b5;
+
+// misc backgrounds
+$progressBarSpanBG: #aaa5ff;
+$iconBackground: #333;
+$appHeaderBG: #282c34;
+
+// misc colors
+$skillsColor: #645beb;
+$appLink: #09d3ac;
+
+// social media icons
+$faceBook: #3b5998;
+$linkedin: #0e76a8;
+$github: #333;
+$gitlab: #fca326;
+$google: #ea4335;
+$twitter: #1da1f2;
+$medium: #000;
+$stackoverflow: #f48024;
+$instagram: #c13584;
+$kaggle: #20beff;

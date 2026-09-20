@@ -1,0 +1,106 @@
+@import "../../_globalColor";
+
+.modern-footer {
+  padding: 50px 6% 40px 6%;
+  background: #080b11;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 24px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-logo {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  letter-spacing: -0.01em;
+}
+
+.footer-logo .code-bracket {
+  color: #6366f1;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.footer-role {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  color: #38bdf8;
+  margin: 0;
+}
+
+.footer-social-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.footer-social-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.footer-social-btn:hover {
+  background: rgba(99, 102, 241, 0.2);
+  border-color: rgba(99, 102, 241, 0.4);
+  color: #ffffff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+}
+
+.footer-bottom-text {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 20px;
+  width: 100%;
+}
+
+.copyright-text {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  margin: 0;
+}
+
+.footer-tagline {
+  font-size: 0.8rem;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Light mode overrides */
+.modern-footer.light-footer {
+  background: #ffffff;
+  border-top-color: rgba(0, 0, 0, 0.08);
+  .footer-logo { color: #0f172a; }
+  .footer-social-btn { background: #f1f5f9; color: #334155; border-color: rgba(0,0,0,0.08); }
+  .copyright-text { color: #64748b; }
+}

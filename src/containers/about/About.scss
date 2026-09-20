@@ -1,0 +1,230 @@
+@import "../../_globalColor";
+
+.about-section {
+  padding: 90px 6%;
+  background: #0d121c;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.about-container {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 54px;
+}
+
+.section-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.85rem;
+  color: #818cf8;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f8fafc;
+  letter-spacing: -0.02em;
+  margin: 0 0 12px 0;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #94a3b8;
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 36px;
+  align-items: stretch;
+}
+
+.about-narrative-card {
+  background: rgba(18, 24, 38, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease;
+}
+
+.about-narrative-card:hover {
+  border-color: rgba(99, 102, 241, 0.3);
+  box-shadow: 0 25px 50px -15px rgba(0, 0, 0, 0.6);
+}
+
+.card-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: rgba(99, 102, 241, 0.12);
+  color: #818cf8;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.82rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.narrative-text {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: #cbd5e1;
+  margin: 0 0 28px 0;
+}
+
+.narrative-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: #94a3b8;
+}
+
+.highlight-icon {
+  color: #10b981;
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.highlight-item strong {
+  color: #f1f5f9;
+}
+
+.about-stats-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+.stat-card {
+  background: rgba(18, 24, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  backdrop-filter: blur(8px);
+  transition: all 0.25s ease;
+}
+
+.stat-card:hover {
+  transform: translateX(6px);
+  border-color: rgba(56, 189, 248, 0.3);
+  background: rgba(22, 30, 48, 0.85);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+}
+
+.stat-icon-wrapper {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15) 0%, rgba(56, 189, 248, 0.15) 100%);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #38bdf8;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.stat-card:nth-child(2) .stat-icon-wrapper {
+  color: #818cf8;
+  border-color: rgba(129, 140, 248, 0.3);
+}
+
+.stat-card:nth-child(3) .stat-icon-wrapper {
+  color: #34d399;
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+.stat-card:nth-child(4) .stat-icon-wrapper {
+  color: #f59e0b;
+  border-color: rgba(245, 158, 11, 0.3);
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #f8fafc;
+  margin: 0 0 4px 0;
+}
+
+.stat-desc {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Light mode support */
+.about-section.light-about {
+  background: #f1f5f9;
+  .section-title { color: #0f172a; }
+  .section-subtitle { color: #64748b; }
+  .about-narrative-card { background: #ffffff; border-color: rgba(0,0,0,0.08); }
+  .narrative-text { color: #334155; }
+  .stat-card { background: #ffffff; border-color: rgba(0,0,0,0.08); }
+  .stat-title { color: #0f172a; }
+  .stat-desc { color: #64748b; }
+}
+
+/* Responsive */
+@media (max-width: 960px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-section {
+    padding: 60px 5%;
+  }
+  .section-title {
+    font-size: 2rem;
+  }
+  .about-narrative-card {
+    padding: 24px;
+  }
+  .stat-card {
+    padding: 18px;
+    gap: 14px;
+  }
+  .stat-icon-wrapper {
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
+  }
+}

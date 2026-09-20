@@ -1,0 +1,596 @@
+@import "../../_globalColor";
+
+.skills-command-center {
+  padding: 95px 5%;
+  background: #090d16;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-inner-container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================
+   INFINITE MARQUEE TICKER
+   ========================================= */
+.tech-marquee-wrapper {
+  margin: 0 auto 50px auto;
+  overflow: hidden;
+  position: relative;
+  max-width: 1200px;
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 1) 88%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 1) 88%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.tech-marquee-track {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: marqueeScroll 32s linear infinite;
+}
+
+.tech-marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(18, 24, 38, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 9999px;
+  color: #cbd5e1;
+  font-size: 0.9rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.marquee-pill i {
+  font-size: 1.25rem;
+}
+
+.marquee-pill i.fa-icon {
+  font-size: 1rem;
+  color: #818cf8;
+}
+
+.marquee-pill:hover {
+  border-color: rgba(99, 102, 241, 0.4);
+  background: rgba(30, 41, 59, 0.8);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================================
+   STUDIO CONSOLE WRAPPER
+   ========================================= */
+.skills-studio-console {
+  background: rgba(14, 20, 33, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 0 0 40px -10px rgba(99, 102, 241, 0.08);
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.skills-studio-console:hover {
+  border-color: rgba(99, 102, 241, 0.25);
+}
+
+/* Console Header Bar */
+.console-header-bar {
+  background: rgba(10, 15, 26, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  padding: 14px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.console-window-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.console-window-dots .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.console-window-dots .dot.red {
+  background: #ef4444;
+}
+.console-window-dots .dot.yellow {
+  background: #f59e0b;
+}
+.console-window-dots .dot.green {
+  background: #10b981;
+}
+
+.console-prompt-text {
+  margin-left: 10px;
+  color: #64748b;
+  font-size: 0.82rem;
+}
+
+/* Category Navigation Pills */
+.console-category-nav {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.category-pill-btn {
+  background: transparent;
+  border: 1px solid transparent;
+  color: #94a3b8;
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+}
+
+.category-pill-btn i {
+  font-size: 0.95rem;
+}
+
+.category-pill-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.category-pill-btn.active {
+  color: #ffffff;
+  background: rgba(99, 102, 241, 0.16);
+  border-color: rgba(99, 102, 241, 0.4);
+  box-shadow: 0 2px 10px rgba(99, 102, 241, 0.2);
+}
+
+.active-glow-indicator {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #6366f1;
+  box-shadow: 0 0 8px #6366f1;
+}
+
+/* =========================================
+   CONSOLE BODY (TWO COLUMNS)
+   ========================================= */
+.console-body {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  padding: 36px 36px;
+  gap: 36px;
+}
+
+@media (max-width: 1024px) {
+  .console-body {
+    grid-template-columns: 1fr;
+    padding: 24px;
+    gap: 32px;
+  }
+}
+
+/* Column 1: Tech Cloud & Capabilities */
+.tech-cloud-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.category-meta-tag {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.status-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 12px;
+  border-radius: 9999px;
+}
+
+.badge-backend {
+  background: rgba(16, 185, 129, 0.12);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.badge-database {
+  background: rgba(245, 158, 11, 0.12);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+.badge-frontend {
+  background: rgba(56, 189, 248, 0.12);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.3);
+}
+
+.badge-devops {
+  background: rgba(129, 140, 248, 0.12);
+  color: #a5b4fc;
+  border: 1px solid rgba(129, 140, 248, 0.3);
+}
+
+.badge-integrations {
+  background: rgba(236, 72, 153, 0.12);
+  color: #f472b6;
+  border: 1px solid rgba(236, 72, 153, 0.3);
+}
+
+.pill-count {
+  font-size: 0.78rem;
+  color: #94a3b8;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 3px 10px;
+  border-radius: 8px;
+}
+
+.category-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 10px 0;
+  letter-spacing: -0.01em;
+}
+
+.category-summary-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #94a3b8;
+  margin: 0 0 28px 0;
+}
+
+/* Fluid Tech Pills Cloud (NO boxy cards!) */
+.fluid-tech-pills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.fluid-tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 9999px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: default;
+}
+
+.fluid-tech-badge:hover {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(99, 102, 241, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.4), 0 0 16px -2px rgba(99, 102, 241, 0.3);
+}
+
+.badge-icon-wrap {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+  flex-shrink: 0;
+}
+
+.badge-icon-wrap i {
+  display: inline-block;
+}
+
+.badge-name {
+  color: #f1f5f9;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Capabilities Checklist */
+.engineering-capabilities {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 14px;
+  padding: 22px 24px;
+  margin-top: auto;
+}
+
+.capabilities-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f8fafc;
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.text-emerald {
+  color: #10b981;
+}
+
+.capabilities-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.capabilities-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: #94a3b8;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.bullet-indicator {
+  color: #6366f1;
+  font-size: 0.85rem;
+  font-weight: bold;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* =========================================
+   COLUMN 2: CODE & ARCHITECTURE INSPECTOR
+   ========================================= */
+.code-inspector-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.code-inspector-card {
+  background: #080c14;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+.inspector-title-bar {
+  background: rgba(15, 22, 36, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.file-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.file-icon {
+  color: #6366f1;
+  font-size: 0.9rem;
+}
+
+.file-path {
+  color: #cbd5e1;
+  font-size: 0.8rem;
+  letter-spacing: -0.02em;
+}
+
+.copy-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+}
+
+/* Code Viewport */
+.code-editor-viewport {
+  padding: 20px;
+  overflow-x: auto;
+  flex: 1;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+.code-editor-viewport pre {
+  margin: 0;
+}
+
+.code-editor-viewport code {
+  color: #e2e8f0;
+  font-family: "JetBrains Mono", Consolas, Monaco, monospace;
+}
+
+/* Inspector Footer */
+.inspector-footer {
+  background: rgba(10, 15, 24, 0.8);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px 18px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-label {
+  color: #64748b;
+  font-size: 0.78rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.pkg-tag {
+  background: rgba(99, 102, 241, 0.1);
+  color: #818cf8;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.72rem;
+}
+
+/* =========================================
+   LIGHT MODE SUPPORT
+   ========================================= */
+.light-skills {
+  background: #f8fafc;
+
+  .tech-marquee-wrapper {
+    mask-image: linear-gradient(
+      to right,
+      rgba(248, 250, 252, 0) 0%,
+      rgba(248, 250, 252, 1) 12%,
+      rgba(248, 250, 252, 1) 88%,
+      rgba(248, 250, 252, 0) 100%
+    );
+  }
+
+  .marquee-pill {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    color: #334155;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      background: #f1f5f9;
+      border-color: #6366f1;
+      color: #0f172a;
+    }
+  }
+
+  .skills-studio-console {
+    background: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.07);
+  }
+
+  .console-header-bar {
+    background: #f1f5f9;
+    border-bottom-color: #e2e8f0;
+  }
+
+  .category-pill-btn {
+    color: #64748b;
+
+    &:hover {
+      color: #0f172a;
+      background: rgba(0, 0, 0, 0.04);
+    }
+
+    &.active {
+      color: #4f46e5;
+      background: rgba(79, 70, 229, 0.08);
+      border-color: rgba(79, 70, 229, 0.25);
+    }
+  }
+
+  .category-heading {
+    color: #0f172a;
+  }
+
+  .category-summary-desc {
+    color: #64748b;
+  }
+
+  .fluid-tech-badge {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+
+    .badge-name {
+      color: #1e293b;
+    }
+
+    &:hover {
+      background: #f1f5f9;
+      border-color: #4f46e5;
+    }
+  }
+
+  .engineering-capabilities {
+    background: #f8fafc;
+    border-color: #e2e8f0;
+
+    .capabilities-title {
+      color: #0f172a;
+    }
+
+    .capabilities-list li {
+      color: #475569;
+    }
+  }
+
+  .code-inspector-card {
+    background: #0f172a;
+    border-color: #1e293b;
+  }
+}
