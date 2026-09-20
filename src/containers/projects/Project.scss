@@ -1,5 +1,5 @@
 .project-title {
-  font-size: 52px;
+  font-size: clamp(26px, 5vw, 52px);
   font-weight: 400;
   line-height: normal;
 }
@@ -11,7 +11,7 @@
 
 .repo-cards-div-main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr));
   gap: 1rem 1rem;
 }
 
@@ -27,6 +27,7 @@
     text-align: center;
   }
   .repo-cards-div-main {
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   }
 }
+

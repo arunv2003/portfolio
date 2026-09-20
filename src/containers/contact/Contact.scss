@@ -14,9 +14,10 @@
 
 .contact-grid {
   display: grid;
-  grid-template-columns: 0.8fr 1.6fr;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.6fr);
   gap: 28px;
   align-items: stretch;
+  min-width: 0;
 }
 
 /* Info Panel */
@@ -124,7 +125,9 @@
   font-size: 0.96rem;
   color: #f1f5f9;
   font-weight: 500;
+  word-break: break-word;
 }
+
 
 .contact-social-row {
   display: flex;
@@ -210,41 +213,13 @@
   text-align: left;
 }
 
-.form-group-row {
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  gap: 8px !important;
-  width: 100% !important;
-
-  .form-label {
-    width: 82px !important;
-    min-width: 82px !important;
-    max-width: 82px !important;
-    flex-shrink: 0 !important;
-    margin: 0 !important;
-    font-size: 0.92rem !important;
-    font-weight: 600 !important;
-    color: #e2e8f0 !important;
-    text-align: right !important;
-    letter-spacing: -0.01em !important;
-    white-space: nowrap !important;
-  }
-
-  .form-input {
-    flex: 1 1 auto !important;
-    width: 100% !important;
-    min-width: 0 !important;
-  }
-}
-
 .form-label {
-  font-size: 0.98rem;
+  font-size: 0.94rem;
   font-weight: 600;
   color: #e2e8f0;
   display: block;
   text-align: left;
+  letter-spacing: -0.01em;
 }
 
 .required {
@@ -259,9 +234,9 @@
   background: rgba(10, 15, 26, 0.92);
   border: 2px solid rgba(255, 255, 255, 0.18);
   border-radius: 12px;
-  padding: 14px 20px;
+  padding: 13px 18px;
   color: #ffffff;
-  font-size: 1.02rem;
+  font-size: 1rem;
   font-weight: 500;
   font-family: inherit;
   line-height: 1.5;
@@ -269,12 +244,12 @@
 }
 
 input.form-input {
-  height: 56px;
+  min-height: 50px;
 }
 
 .form-input::placeholder {
   color: #64748b;
-  font-size: 0.96rem;
+  font-size: 0.94rem;
   font-weight: 400;
 }
 
@@ -286,11 +261,11 @@ input.form-input {
 }
 
 .form-textarea {
-  min-height: 140px;
+  min-height: 130px;
   height: auto;
   resize: vertical;
   line-height: 1.6;
-  padding: 16px 20px;
+  padding: 14px 18px;
 }
 
 .submit-btn {
@@ -306,6 +281,7 @@ input.form-input {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  min-height: 48px;
   box-shadow: 0 6px 20px rgba(99, 102, 241, 0.35);
   transition: all 0.25s ease;
   margin-top: 8px;
@@ -332,28 +308,51 @@ input.form-input {
 
 @media (max-width: 960px) {
   .contact-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
   }
 }
 
 @media (max-width: 600px) {
   .contact-section {
-    padding: 60px 5%;
+    padding: 55px 4%;
   }
   .contact-info-panel, .contact-form-card {
-    padding: 24px 18px;
+    padding: 22px 16px;
+    border-radius: 14px;
   }
-  .form-group-row {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 8px;
-
-    .form-label {
-      width: 100%;
-      min-width: unset;
-    }
+  .panel-title, .form-title {
+    font-size: 1.25rem;
   }
   .contact-social-row {
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .social-btn {
+    flex: 1 1 auto;
+    min-width: 100px;
+    padding: 10px 12px;
+    font-size: 0.84rem;
+  }
+  .submit-btn {
+    width: 100%;
+    padding: 13px 20px;
   }
 }
+
+@media (max-width: 380px) {
+  .social-btn {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+  .channel-item {
+    padding: 10px 12px;
+    gap: 12px;
+  }
+  .channel-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+}
+

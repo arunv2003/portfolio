@@ -29,25 +29,28 @@
 }
 
 .section-title {
-  font-size: 2.5rem;
+  font-size: clamp(1.8rem, 4.5vw, 2.5rem);
   font-weight: 800;
   color: #f8fafc;
   letter-spacing: -0.02em;
   margin: 0 0 12px 0;
+  word-break: break-word;
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
   color: #94a3b8;
   max-width: 650px;
   margin: 0 auto;
 }
 
+
 .about-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: 36px;
   align-items: stretch;
+  min-width: 0;
 }
 
 .about-narrative-card {
@@ -118,8 +121,9 @@
 
 .about-stats-cards {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, 1fr);
   gap: 16px;
+  min-width: 0;
 }
 
 .stat-card {
@@ -204,27 +208,41 @@
 /* Responsive */
 @media (max-width: 960px) {
   .about-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (max-width: 600px) {
   .about-section {
-    padding: 60px 5%;
-  }
-  .section-title {
-    font-size: 2rem;
+    padding: 55px 4%;
   }
   .about-narrative-card {
-    padding: 24px;
+    padding: 20px 16px;
+  }
+  .narrative-text {
+    font-size: 0.95rem;
+    line-height: 1.65;
+    margin-bottom: 20px;
+  }
+  .highlight-item {
+    font-size: 0.88rem;
+    gap: 10px;
   }
   .stat-card {
-    padding: 18px;
+    padding: 16px 14px;
     gap: 14px;
   }
   .stat-icon-wrapper {
-    width: 44px;
-    height: 44px;
-    font-size: 1.15rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+  .stat-title {
+    font-size: 1.05rem;
+  }
+  .stat-desc {
+    font-size: 0.85rem;
   }
 }
+

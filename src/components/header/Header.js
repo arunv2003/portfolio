@@ -13,8 +13,17 @@ function Header() {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 30);
     };
+    const handleKeyDown = (e) => {
+      if (e.key === "Escape") {
+        setMenuOpen(false);
+      }
+    };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, []);
 
   const closeMenu = () => setMenuOpen(false);
@@ -23,7 +32,7 @@ function Header() {
     <header
       className={`${isDark ? "dark-menu header header-fixed" : "header header-fixed"} ${
         isScrolled ? "header-scrolled" : ""
-      }`}
+      } ${menuOpen ? "menu-is-open" : ""}`}
     >
         <a href="#greeting" className="logo" onClick={closeMenu}>
           <span className="code-bracket">&lt;</span>
@@ -40,10 +49,25 @@ function Header() {
           id="menu-btn"
           checked={menuOpen}
           onChange={e => setMenuOpen(e.target.checked)}
+          aria-label="Toggle navigation menu"
         />
-        <label className="menu-icon" htmlFor="menu-btn">
+        <label
+          className="menu-icon"
+          htmlFor="menu-btn"
+          aria-label="Navigation Menu"
+          aria-expanded={menuOpen}
+        >
           <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
         </label>
+
+        {menuOpen && (
+          <div
+            className="mobile-backdrop"
+            onClick={closeMenu}
+            aria-hidden="true"
+          />
+        )}
+
 
         <ul className={`${isDark ? "dark-menu menu" : "menu"}`}>
           <li>

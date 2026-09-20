@@ -1,10 +1,12 @@
 @import "./globalColor";
 
 .App {
-  text-align: center;
   width: 100%;
+  max-width: 100%;
   overflow-x: hidden;
+  position: relative;
 }
+
 
 .App-logo {
   height: 40vmin;

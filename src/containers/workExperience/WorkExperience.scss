@@ -172,7 +172,7 @@
 
 .education-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
   gap: 20px;
 }
 
@@ -185,6 +185,8 @@
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.25s ease;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .education-card-modern:hover {
@@ -207,18 +209,21 @@
   font-weight: 700;
   color: #f8fafc;
   margin: 0 0 6px 0;
+  word-break: break-word;
 }
 
 .edu-school {
   font-size: 0.92rem;
   color: #cbd5e1;
   margin: 0 0 4px 0;
+  word-break: break-word;
 }
 
 .edu-college {
   font-size: 0.82rem;
   color: #64748b;
   margin: 0 0 10px 0;
+  word-break: break-word;
 }
 
 .edu-desc {
@@ -226,6 +231,7 @@
   line-height: 1.55;
   color: #94a3b8;
   margin: 0;
+  word-break: break-word;
 }
 
 /* Light mode overrides */
@@ -242,20 +248,55 @@
 
 @media (max-width: 600px) {
   .experience-section {
-    padding: 60px 5%;
+    padding: 55px 4%;
   }
   .timeline-item {
-    gap: 16px;
+    gap: 14px;
   }
   .marker-dot {
-    width: 36px;
-    height: 36px;
-    font-size: 0.85rem;
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+    box-shadow: 0 0 10px rgba(99, 102, 241, 0.35);
   }
   .timeline-card {
-    padding: 20px 16px;
+    padding: 18px 14px;
+    margin-bottom: 24px;
+    border-radius: 14px;
   }
   .company-name {
     font-size: 1.15rem;
   }
+  .timeline-desc {
+    font-size: 0.92rem;
+  }
+  .bullet-point {
+    font-size: 0.86rem;
+  }
+  .education-cards-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+  .education-card-modern {
+    padding: 18px 14px;
+  }
 }
+
+@media (max-width: 380px) {
+  .timeline-item {
+    gap: 10px;
+  }
+  .marker-dot {
+    width: 28px;
+    height: 28px;
+    font-size: 0.72rem;
+  }
+  .timeline-card {
+    padding: 16px 12px;
+  }
+  .timeline-date-badge {
+    font-size: 0.75rem;
+    padding: 4px 10px;
+  }
+}
+

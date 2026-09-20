@@ -99,6 +99,10 @@
   box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.6), 0 0 40px -10px rgba(99, 102, 241, 0.08);
   overflow: hidden;
   transition: border-color 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .skills-studio-console:hover {
@@ -115,12 +119,17 @@
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 16px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .console-window-dots {
   display: flex;
   align-items: center;
   gap: 8px;
+  flex-shrink: 0;
 }
 
 .console-window-dots .dot {
@@ -151,6 +160,8 @@
   align-items: center;
   gap: 6px;
   flex-wrap: wrap;
+  max-width: 100%;
+  min-width: 0;
 }
 
 .category-pill-btn {
@@ -167,6 +178,8 @@
   gap: 8px;
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .category-pill-btn i {
@@ -198,14 +211,18 @@
    ========================================= */
 .console-body {
   display: grid;
-  grid-template-columns: 1.15fr 0.85fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
   padding: 36px 36px;
   gap: 36px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 @media (max-width: 1024px) {
   .console-body {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     padding: 24px;
     gap: 32px;
   }
@@ -215,6 +232,11 @@
 .tech-cloud-column {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .category-meta-tag {
@@ -222,7 +244,9 @@
   align-items: center;
   gap: 12px;
   margin-bottom: 12px;
+  flex-wrap: wrap;
 }
+
 
 .status-pill {
   font-size: 0.75rem;
@@ -373,6 +397,15 @@
   color: #94a3b8;
   font-size: 0.88rem;
   line-height: 1.5;
+  word-break: break-word;
+  min-width: 0;
+  max-width: 100%;
+}
+
+.capabilities-list li span:last-child {
+  word-break: break-word;
+  min-width: 0;
+  flex: 1;
 }
 
 .bullet-indicator {
@@ -389,6 +422,11 @@
 .code-inspector-column {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .code-inspector-card {
@@ -397,6 +435,10 @@
   border-radius: 14px;
   overflow: hidden;
   height: 100%;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   box-shadow: inset 0 0 30px rgba(0, 0, 0, 0.5);
@@ -409,23 +451,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  gap: 8px;
 }
 
 .file-info {
   display: flex;
   align-items: center;
   gap: 8px;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .file-icon {
   color: #6366f1;
   font-size: 0.9rem;
+  flex-shrink: 0;
 }
 
 .file-path {
   color: #cbd5e1;
   font-size: 0.8rem;
   letter-spacing: -0.02em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .copy-btn {
@@ -439,6 +492,7 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
+  flex-shrink: 0;
   transition: all 0.2s ease;
 }
 
@@ -451,18 +505,30 @@
 .code-editor-viewport {
   padding: 20px;
   overflow-x: auto;
+  overflow-y: auto;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
   flex: 1;
   font-size: 0.82rem;
   line-height: 1.6;
+  -webkit-overflow-scrolling: touch;
 }
 
 .code-editor-viewport pre {
   margin: 0;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  white-space: pre;
+  -webkit-overflow-scrolling: touch;
 }
 
 .code-editor-viewport code {
   color: #e2e8f0;
   font-family: "JetBrains Mono", Consolas, Monaco, monospace;
+  display: block;
+  min-width: max-content;
 }
 
 /* Inspector Footer */
@@ -594,3 +660,123 @@
     border-color: #1e293b;
   }
 }
+
+/* =========================================
+   RESPONSIVE QUERIES
+   ========================================= */
+@media (max-width: 960px) {
+  .skills-command-center {
+    padding: 70px 5%;
+  }
+
+  .tech-marquee-wrapper {
+    margin-bottom: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  .console-header-bar {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .console-window-dots {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .console-prompt-text {
+    display: none;
+  }
+
+  .console-category-nav {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    display: flex;
+    gap: 8px;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .category-pill-btn {
+    padding: 7px 14px;
+    font-size: 0.82rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .skills-command-center {
+    padding: 55px 4%;
+  }
+
+  .console-body {
+    padding: 18px 14px;
+    gap: 24px;
+  }
+
+  .category-heading {
+    font-size: 1.4rem;
+  }
+
+  .category-summary-desc {
+    font-size: 0.88rem;
+    margin-bottom: 20px;
+  }
+
+  .fluid-tech-pills-cloud {
+    gap: 8px;
+    margin-bottom: 22px;
+  }
+
+  .fluid-tech-badge {
+    padding: 7px 12px;
+    gap: 7px;
+
+    .badge-icon-wrap {
+      width: 20px;
+      height: 20px;
+      font-size: 1.15rem;
+    }
+
+    .badge-name {
+      font-size: 0.84rem;
+    }
+  }
+
+  .engineering-capabilities {
+    padding: 16px 14px;
+
+    .capabilities-title {
+      font-size: 0.88rem;
+    }
+
+    .capabilities-list li {
+      font-size: 0.84rem;
+    }
+  }
+
+  .code-editor-viewport {
+    padding: 14px 12px;
+    font-size: 0.78rem;
+  }
+
+  .inspector-footer {
+    padding: 10px 12px;
+    font-size: 0.75rem;
+  }
+}
+

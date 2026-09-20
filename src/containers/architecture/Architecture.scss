@@ -81,7 +81,11 @@
 
 .node-tech-pill {
   display: inline-block;
+  max-width: 100%;
+  word-break: break-word;
+  white-space: normal;
   font-size: 0.82rem;
+  line-height: 1.45;
   color: #38bdf8;
   background: rgba(56, 189, 248, 0.08);
   border: 1px solid rgba(56, 189, 248, 0.18);
@@ -89,6 +93,7 @@
   border-radius: 6px;
   margin-bottom: 12px;
 }
+
 
 .node-desc {
   font-size: 0.96rem;
@@ -137,12 +142,22 @@
 
 @media (max-width: 600px) {
   .architecture-section {
-    padding: 60px 5%;
+    padding: 55px 4%;
   }
   .architecture-node-card {
-    padding: 20px 18px;
+    padding: 18px 14px;
+    border-radius: 14px;
   }
   .node-title {
     font-size: 1.15rem;
   }
+  .node-desc {
+    font-size: 0.88rem;
+    line-height: 1.55;
+  }
+  .node-tech-pill {
+    font-size: 0.76rem;
+    padding: 3px 8px;
+  }
 }
+

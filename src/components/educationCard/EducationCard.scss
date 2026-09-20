@@ -32,13 +32,11 @@
 
 .education-text-school {
   margin: 0;
-  font-size: 28px;
+  font-size: clamp(1.2rem, 3.5vw, 28px);
   font-weight: 700;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
-  height: 27px;
+  word-break: break-word;
 }
+
 
 .education-roundedimg {
   object-fit: cover;

@@ -6,6 +6,8 @@
   color: $textColorDark;
   font-weight: 700;
   width: max-content;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 13px 22px;
   margin-right: 50px;
   text-transform: uppercase;
@@ -18,6 +20,7 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out 0s;
 }
+
 .main-button:hover {
   background-color: $darkBoxShadow2;
   color: $buttonColor;

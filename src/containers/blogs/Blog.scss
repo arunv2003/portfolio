@@ -38,7 +38,7 @@
 }
 .blog-text-div {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
   gap: 32px;
 }
 .subTitle {
@@ -63,8 +63,9 @@
   }
 }
 
-@media screen and (max-width: 480px) and (min-width: 300px) {
+@media (max-width: 600px) {
   .blog-text-div {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
+    gap: 20px;
   }
 }

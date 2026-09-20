@@ -144,8 +144,8 @@ export default function Contact() {
               )}
 
               <form onSubmit={handleSubmit} className="contact-form">
-                <div className="form-group form-group-row" style={{ display: "flex", flexDirection: "row", alignItems: "center", width: "100%", gap: "8px" }}>
-                  <label htmlFor="name" className="form-label" style={{ width: "82px", minWidth: "82px", flexShrink: 0, margin: 0, textAlign: "right", whiteSpace: "nowrap" }}>
+                <div className="form-group">
+                  <label htmlFor="name" className="form-label">
                     Your Name <span className="required">*</span>
                   </label>
                   <input
@@ -157,12 +157,11 @@ export default function Contact() {
                     placeholder="e.g. Rahul Sharma"
                     required
                     className="form-input"
-                    style={{ flex: "1 1 auto", width: "100%", minWidth: 0 }}
                   />
                 </div>
 
-                <div className="form-group form-group-row" style={{ display: "flex", flexDirection: "row", alignItems: "center", width: "100%", gap: "8px" }}>
-                  <label htmlFor="email" className="form-label" style={{ width: "82px", minWidth: "82px", flexShrink: 0, margin: 0, textAlign: "right", whiteSpace: "nowrap" }}>
+                <div className="form-group">
+                  <label htmlFor="email" className="form-label">
                     Your Email <span className="required">*</span>
                   </label>
                   <input
@@ -174,12 +173,11 @@ export default function Contact() {
                     placeholder="e.g. rahul@example.com"
                     required
                     className="form-input"
-                    style={{ flex: "1 1 auto", width: "100%", minWidth: 0 }}
                   />
                 </div>
 
-                <div className="form-group form-group-row" style={{ display: "flex", flexDirection: "row", alignItems: "center", width: "100%", gap: "8px" }}>
-                  <label htmlFor="subject" className="form-label" style={{ width: "82px", minWidth: "82px", flexShrink: 0, margin: 0, textAlign: "right", whiteSpace: "nowrap" }}>
+                <div className="form-group">
+                  <label htmlFor="subject" className="form-label">
                     Subject
                   </label>
                   <input
@@ -190,7 +188,6 @@ export default function Contact() {
                     onChange={handleChange}
                     placeholder="e.g. Full Stack Opportunity / Project Discussion"
                     className="form-input"
-                    style={{ flex: "1 1 auto", width: "100%", minWidth: 0 }}
                   />
                 </div>
 
@@ -214,6 +211,7 @@ export default function Contact() {
                   <i className="fas fa-paper-plane"></i> Send Message
                 </button>
               </form>
+
             </div>
           </Fade>
         </div>

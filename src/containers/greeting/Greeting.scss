@@ -16,18 +16,24 @@
 
 .greeting-container {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
   gap: 48px;
   align-items: center;
   max-width: 1320px;
   width: 100%;
+  min-width: 0;
   margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .greeting-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .greeting-badge {
@@ -65,12 +71,13 @@
 }
 
 .greeting-title {
-  font-size: 3.4rem;
+  font-size: clamp(2rem, 5.5vw, 3.4rem);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.03em;
   color: #f8fafc;
   margin: 0 0 12px 0;
+  word-break: break-word;
 }
 
 .highlight-name {
@@ -81,12 +88,13 @@
 
 .greeting-role {
   font-family: 'JetBrains Mono', monospace;
-  font-size: 1.5rem;
+  font-size: clamp(1.1rem, 3.5vw, 1.5rem);
   font-weight: 600;
   color: #38bdf8;
   margin-bottom: 20px;
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .role-prefix {
@@ -106,7 +114,7 @@
 }
 
 .greeting-description {
-  font-size: 1.12rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.12rem);
   line-height: 1.7;
   color: #94a3b8;
   max-width: 580px;
@@ -116,10 +124,12 @@
 .hero-cta-buttons {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 14px;
   flex-wrap: wrap;
   margin-bottom: 32px;
+  width: 100%;
 }
+
 
 .btn {
   display: inline-flex;
@@ -210,10 +220,13 @@
   transform: translateY(-2px);
 }
 
-/* Terminal / Code Editor Visual */
 .hero-terminal-wrapper {
   position: relative;
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .terminal-window {
@@ -225,6 +238,10 @@
               0 0 30px rgba(99, 102, 241, 0.15);
   backdrop-filter: blur(16px);
   transition: all 0.3s ease;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
 }
 
 .terminal-window:hover {
@@ -240,12 +257,18 @@
   display: flex;
   align-items: center;
   gap: 16px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .terminal-dots {
   display: flex;
   align-items: center;
   gap: 7px;
+  flex-shrink: 0;
 }
 
 .dot {
@@ -262,6 +285,15 @@
   display: flex;
   gap: 6px;
   overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+  flex: 1;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 .tab-btn {
@@ -277,6 +309,7 @@
   align-items: center;
   gap: 6px;
   transition: all 0.2s ease;
+  white-space: nowrap;
 }
 
 .tab-btn.active {
@@ -294,19 +327,34 @@
 }
 
 .terminal-body {
-  padding: 20px 22px;
-  min-height: 270px;
+  padding: 18px 20px;
+  min-height: 250px;
   max-height: 340px;
   overflow-y: auto;
-  font-size: 0.86rem;
+  overflow-x: auto;
+  max-width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  font-size: 0.85rem;
   line-height: 1.65;
   background: #0d121c;
+  -webkit-overflow-scrolling: touch;
 }
 
 .code-block {
   margin: 0;
   color: #cbd5e1;
   font-family: 'JetBrains Mono', monospace;
+  white-space: pre;
+  max-width: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.code-block code {
+  display: block;
+  min-width: max-content;
 }
 
 .token-keyword { color: #c084fc; font-weight: 500; }
@@ -322,6 +370,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
   font-family: 'JetBrains Mono', monospace;
   font-size: 0.78rem;
   color: #64748b;
@@ -345,6 +395,7 @@
 .footer-stats {
   display: flex;
   gap: 14px;
+  flex-wrap: wrap;
 }
 
 /* Floating Badges */
@@ -403,9 +454,6 @@
 
 /* Responsive queries */
 @media (max-width: 1100px) {
-  .greeting-title {
-    font-size: 2.8rem;
-  }
   .floating-badge {
     display: none;
   }
@@ -413,36 +461,71 @@
 
 @media (max-width: 960px) {
   .greet-main {
-    padding: 40px 5% 60px 5%;
+    padding: 100px 5% 60px 5%;
   }
 
   .greeting-container {
-    grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .greeting-title {
-    font-size: 2.4rem;
-  }
-
-  .greeting-role {
-    font-size: 1.25rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 36px;
   }
 
   .terminal-window {
     max-width: 100%;
+    min-width: 0;
   }
 }
 
 @media (max-width: 600px) {
-  .greeting-title {
-    font-size: 2rem;
+  .greet-main {
+    padding: 85px 4% 45px 4%;
   }
+
+  .greeting-container {
+    gap: 28px;
+  }
+
+  .terminal-header {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .terminal-body {
+    padding: 14px 14px;
+    font-size: 0.78rem;
+    min-height: 220px;
+  }
+
   .hero-cta-buttons {
     width: 100%;
+    gap: 10px;
   }
+
   .btn {
     width: 100%;
     justify-content: center;
+    padding: 12px 18px;
+    font-size: 0.95rem;
+  }
+
+  .hero-socials {
+    width: 100%;
+    justify-content: flex-start;
   }
 }
+
+@media (max-width: 380px) {
+  .greet-main {
+    padding: 78px 3% 40px 3%;
+  }
+
+  .greeting-badge {
+    font-size: 0.76rem;
+    padding: 5px 10px;
+  }
+
+  .terminal-footer {
+    font-size: 0.72rem;
+    padding: 8px 10px;
+  }
+}
+

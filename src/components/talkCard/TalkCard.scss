@@ -9,6 +9,7 @@
 .rectangle {
   background: url(../../assets/images/talksCardBack.svg);
   width: 380px;
+  max-width: 100%;
   height: 300px;
   border-radius: 4px;
   box-shadow: 0px 20px 50px $darkBoxShadow;
@@ -17,6 +18,7 @@
   transition: all 0.3s ease;
   margin-top: 50px;
 }
+
 .rectangle:hover {
   box-shadow: 0 20px 40px $textColorDark;
 }
