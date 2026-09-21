@@ -16,8 +16,8 @@ import {useLocalStorage} from "../hooks/useLocalStorage";
 import "./Main.scss";
 
 const Main = () => {
-  // Default to dark theme for modern developer aesthetic
-  const [isDark, setIsDark] = useLocalStorage("isDark", true);
+  // Default to light theme
+  const [isDark, setIsDark] = useLocalStorage("isDark", false);
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] = useState(true);
 
   useEffect(() => {
