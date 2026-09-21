@@ -179,6 +179,12 @@
   background-color: rgba(255, 255, 255, 0.92);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 
+  &.header-scrolled {
+    background-color: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.08);
+    border-bottom-color: rgba(0, 0, 0, 0.08);
+  }
+
   .logo {
     color: #0f172a;
   }
@@ -196,6 +202,11 @@
     background-color: rgba(0, 0, 0, 0.04);
     border-color: rgba(0, 0, 0, 0.1);
     color: #1e293b !important;
+  }
+  .menu-icon .navicon,
+  .menu-icon .navicon:before,
+  .menu-icon .navicon:after {
+    background: #1e293b;
   }
 }
 

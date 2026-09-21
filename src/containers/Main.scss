@@ -11,12 +11,26 @@
 }
 
 .light-mode {
-  background-color: #ffffff;
+  background-color: #f8fafc;
   color: #0f172a;
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
   position: relative;
   transition: 0.2s ease;
+
+  /* Universal section header light-mode contrast guarantees */
+  .section-title {
+    color: #0f172a !important;
+  }
+  .section-subtitle {
+    color: #475569 !important;
+  }
+  .section-eyebrow {
+    color: #4f46e5 !important;
+  }
+  .subTitle {
+    color: #475569 !important;
+  }
 }
 

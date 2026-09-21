@@ -212,13 +212,78 @@
 /* Light Mode Overrides */
 .projects-section.light-projects {
   background: #f8fafc;
-  .project-heading { color: #0f172a; }
-  .project-summary { color: #475569; }
-  .modern-project-card { background: #ffffff; border-color: rgba(0,0,0,0.08); }
-  .features-list-wrapper { background: #f1f5f9; border-color: rgba(0,0,0,0.06); }
-  .feature-item { color: #334155; }
-  .tech-pill { background: #e0f2fe; color: #0284c7; }
-  .btn-secondary-action { background: #f1f5f9; color: #1e293b; border-color: rgba(0,0,0,0.1); }
+
+  .section-eyebrow { color: #4f46e5; }
+  .section-title { color: #0f172a; }
+  .section-subtitle { color: #475569; }
+
+  .modern-project-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+
+    &:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 15px 35px -8px rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .project-badge {
+    background: #eef2ff;
+    color: #4338ca;
+    border-color: #c7d2fe;
+  }
+
+  .card-controls .mini-dot {
+    background: rgba(0, 0, 0, 0.15);
+  }
+
+  .project-heading {
+    color: #0f172a;
+  }
+
+  .project-summary {
+    color: #334155;
+  }
+
+  .features-list-wrapper {
+    background: #f8fafc;
+    border-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .features-subheading {
+    color: #0369a1;
+  }
+
+  .feature-item {
+    color: #334155;
+  }
+
+  .bullet-icon {
+    color: #4f46e5;
+  }
+
+  .tech-pill {
+    background: #e0f2fe;
+    color: #0284c7;
+    border-color: #bae6fd;
+  }
+
+  .project-actions-row {
+    border-top-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .btn-secondary-action {
+    background: #f8fafc;
+    color: #1e293b;
+    border-color: rgba(0, 0, 0, 0.12);
+
+    &:hover {
+      background: #eef2ff;
+      color: #4f46e5;
+      border-color: #c7d2fe;
+    }
+  }
 }
 
 /* Responsive */

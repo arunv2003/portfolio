@@ -21,6 +21,18 @@ const Main = () => {
   const [isShowingSplashAnimation, setIsShowingSplashAnimation] = useState(true);
 
   useEffect(() => {
+    if (isDark) {
+      document.body.classList.add("dark-mode");
+      document.body.classList.remove("light-mode");
+      document.documentElement.style.colorScheme = "dark";
+    } else {
+      document.body.classList.add("light-mode");
+      document.body.classList.remove("dark-mode");
+      document.documentElement.style.colorScheme = "light";
+    }
+  }, [isDark]);
+
+  useEffect(() => {
     if (splashScreen.enabled) {
       const splashTimer = setTimeout(
         () => setIsShowingSplashAnimation(false),

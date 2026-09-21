@@ -237,13 +237,98 @@
 /* Light mode overrides */
 .experience-section.light-exp {
   background: #f8fafc;
-  .marker-dot { border-color: #f8fafc; }
-  .timeline-card { background: #ffffff; border-color: rgba(0,0,0,0.08); }
-  .company-name { color: #0f172a; }
-  .timeline-desc { color: #334155; }
-  .bullet-point { color: #475569; }
-  .education-card-modern { background: #ffffff; border-color: rgba(0,0,0,0.08); }
-  .edu-degree { color: #0f172a; }
+  border-top-color: rgba(0, 0, 0, 0.06);
+
+  .section-eyebrow { color: #4f46e5; }
+  .section-title { color: #0f172a; }
+  .section-subtitle { color: #475569; }
+
+  .marker-dot {
+    border-color: #f8fafc;
+  }
+
+  .timeline-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+
+    &:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 15px 35px -8px rgba(0, 0, 0, 0.09);
+    }
+  }
+
+  .role-title {
+    color: #0369a1;
+    background: #e0f2fe;
+    border-color: #bae6fd;
+  }
+
+  .company-name {
+    color: #0f172a;
+  }
+
+  .company-location {
+    color: #64748b;
+  }
+
+  .timeline-date-badge {
+    color: #334155;
+    background: #f1f5f9;
+    border-color: #e2e8f0;
+  }
+
+  .timeline-desc {
+    color: #334155;
+  }
+
+  .bullet-point {
+    color: #334155;
+  }
+
+  .bullet-indicator {
+    color: #059669;
+  }
+
+  .education-timeline-wrapper {
+    border-top-color: rgba(0, 0, 0, 0.08);
+  }
+
+  .education-block-title {
+    color: #0f172a;
+  }
+
+  .education-card-modern {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+  }
+
+  .edu-duration {
+    color: #4338ca;
+    background: #eef2ff;
+  }
+
+  .edu-degree {
+    color: #0f172a;
+  }
+
+  .edu-school {
+    color: #1e293b;
+    font-weight: 600;
+  }
+
+  .edu-college {
+    color: #64748b;
+  }
+
+  .edu-desc {
+    color: #475569;
+  }
 }
 
 @media (max-width: 600px) {

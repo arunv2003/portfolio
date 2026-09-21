@@ -196,13 +196,61 @@
 /* Light mode support */
 .about-section.light-about {
   background: #f1f5f9;
+  border-top-color: rgba(0, 0, 0, 0.06);
+  border-bottom-color: rgba(0, 0, 0, 0.06);
+
+  .section-eyebrow { color: #4f46e5; }
   .section-title { color: #0f172a; }
-  .section-subtitle { color: #64748b; }
-  .about-narrative-card { background: #ffffff; border-color: rgba(0,0,0,0.08); }
-  .narrative-text { color: #334155; }
-  .stat-card { background: #ffffff; border-color: rgba(0,0,0,0.08); }
-  .stat-title { color: #0f172a; }
-  .stat-desc { color: #64748b; }
+  .section-subtitle { color: #475569; }
+
+  .about-narrative-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.06);
+
+    &:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  .card-badge {
+    background: #eef2ff;
+    color: #4338ca;
+    border: 1px solid #c7d2fe;
+  }
+
+  .narrative-text {
+    color: #334155;
+  }
+
+  .highlight-item {
+    color: #334155;
+
+    strong {
+      color: #0f172a;
+    }
+  }
+
+  .stat-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+
+    &:hover {
+      background: #f8fafc;
+      border-color: rgba(56, 189, 248, 0.4);
+      box-shadow: 0 8px 20px -5px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  .stat-title {
+    color: #0f172a;
+  }
+
+  .stat-desc {
+    color: #475569;
+  }
 }
 
 /* Responsive */

@@ -134,10 +134,48 @@
 /* Light mode overrides */
 .architecture-section.light-arch {
   background: #f1f5f9;
-  .node-title { color: #0f172a; }
-  .architecture-node-card { background: #ffffff; border-color: rgba(0,0,0,0.08); }
-  .node-desc { color: #475569; }
-  .node-tech-pill { background: #e0f2fe; color: #0284c7; }
+  border-top-color: rgba(0, 0, 0, 0.06);
+
+  .section-eyebrow { color: #4f46e5; }
+  .section-title { color: #0f172a; }
+  .section-subtitle { color: #475569; }
+
+  .architecture-node-card {
+    background: #ffffff;
+    border-color: rgba(0, 0, 0, 0.08);
+    box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 12px 30px -8px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  .node-step-number {
+    color: #4338ca;
+    background: #eef2ff;
+    border-color: #c7d2fe;
+  }
+
+  .node-icon-wrapper {
+    color: #0284c7;
+    background: #e0f2fe;
+    border-color: #bae6fd;
+  }
+
+  .node-title {
+    color: #0f172a;
+  }
+
+  .node-tech-pill {
+    background: #e0f2fe;
+    color: #0284c7;
+    border-color: #bae6fd;
+  }
+
+  .node-desc {
+    color: #334155;
+  }
 }
 
 @media (max-width: 600px) {

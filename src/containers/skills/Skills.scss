@@ -571,6 +571,18 @@
 .light-skills {
   background: #f8fafc;
 
+  .section-eyebrow {
+    color: #4f46e5;
+  }
+
+  .section-title {
+    color: #0f172a;
+  }
+
+  .section-subtitle {
+    color: #475569;
+  }
+
   .tech-marquee-wrapper {
     mask-image: linear-gradient(
       to right,
@@ -584,7 +596,7 @@
   .marquee-pill {
     background: #ffffff;
     border-color: #e2e8f0;
-    color: #334155;
+    color: #1e293b;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
 
     &:hover {
@@ -605,8 +617,13 @@
     border-bottom-color: #e2e8f0;
   }
 
+  .pill-count {
+    background: #e2e8f0;
+    color: #334155;
+  }
+
   .category-pill-btn {
-    color: #64748b;
+    color: #475569;
 
     &:hover {
       color: #0f172a;
@@ -615,8 +632,8 @@
 
     &.active {
       color: #4f46e5;
-      background: rgba(79, 70, 229, 0.08);
-      border-color: rgba(79, 70, 229, 0.25);
+      background: rgba(79, 70, 229, 0.1);
+      border-color: rgba(79, 70, 229, 0.3);
     }
   }
 
@@ -625,7 +642,7 @@
   }
 
   .category-summary-desc {
-    color: #64748b;
+    color: #334155;
   }
 
   .fluid-tech-badge {
@@ -633,7 +650,7 @@
     border-color: #e2e8f0;
 
     .badge-name {
-      color: #1e293b;
+      color: #0f172a;
     }
 
     &:hover {
@@ -651,7 +668,11 @@
     }
 
     .capabilities-list li {
-      color: #475569;
+      color: #334155;
+    }
+
+    .bullet-indicator {
+      color: #4f46e5;
     }
   }
 
