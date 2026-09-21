@@ -17,9 +17,43 @@ export default function Greeting() {
       <div className="greeting-container">
         <Fade bottom duration={800} distance="30px">
           <div className="greeting-content">
-            <div className="greeting-badge">
-              <span className="pulse-indicator"></span>
-              <span>Available for Full Stack & Backend Roles</span>
+            {/* ── Profile Photo Card ── */}
+            <div className="profile-photo-card">
+              <div className="profile-card-header">
+                <div className="profile-avatar-ring">
+                  <div className="profile-avatar-inner">
+                    <img
+                      src="/arun.png"
+                      alt="Arun Kumar Verma"
+                      className="profile-avatar-img"
+                    />
+                  </div>
+                </div>
+                <div className="profile-card-info">
+                  <div className="profile-available-dot">
+                    <span className="dot-green-sm"></span>
+                    <span>Available for hire</span>
+                  </div>
+                  <h3 className="profile-card-name">{greeting.name}</h3>
+                  <span className="profile-card-role font-mono">{greeting.role}</span>
+                </div>
+              </div>
+              <div className="profile-card-stats">
+                <div className="profile-stat">
+                  <span className="stat-num">3+</span>
+                  <span className="stat-lbl">Years Exp</span>
+                </div>
+                <div className="profile-stat-divider"></div>
+                <div className="profile-stat">
+                  <span className="stat-num">10+</span>
+                  <span className="stat-lbl">Projects</span>
+                </div>
+                <div className="profile-stat-divider"></div>
+                <div className="profile-stat">
+                  <span className="stat-num">5+</span>
+                  <span className="stat-lbl">Tech Stacks</span>
+                </div>
+              </div>
             </div>
 
             <h1 className="greeting-title">
@@ -84,9 +118,11 @@ export default function Greeting() {
           </div>
         </Fade>
 
-        {/* Developer Console / Terminal Visual */}
+        {/* Developer Profile + Terminal Visual */}
         <Fade right duration={900} distance="40px">
           <div className="hero-terminal-wrapper">
+
+            {/* ── Terminal Window ── */}
             <div className="terminal-window">
               <div className="terminal-header">
                 <div className="terminal-dots">
