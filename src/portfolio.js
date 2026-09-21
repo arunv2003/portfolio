@@ -35,7 +35,7 @@ const socialMediaLinks = {
   linkedin: "https://www.linkedin.com/in/arun-kumar-verma-796435286/",
   gmail: "arunv2074@gmail.com",
   phone: "+919648792390",
-  location: "Lucknow, Uttar Pradesh, India",
+  location: "Okhla Phase 1 Delhi, India",
   display: true
 };
 
@@ -497,7 +497,7 @@ const contactInfo = {
     "Have a project in mind, need a full-stack engineer, or want to discuss backend architectures? Feel free to reach out directly.",
   number: "+91 9648792390",
   email_address: "arunv2074@gmail.com",
-  location: "Lucknow, Uttar Pradesh, India",
+  location: "Okhla Phase 1 Delhi, India",
   availability: "Open to Full-Time Roles & Freelance Opportunities"
 };
 

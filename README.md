@@ -7,7 +7,7 @@ A modern, responsive, and performance-focused personal portfolio web application
 ## 👨‍💻 About Me
 
 - 💻 **Role**: Full Stack Developer
-- 📍 **Location**: Lucknow, Uttar Pradesh, India
+- 📍 **Location**: Okhla Phase 1 Delhi, India
 - 🎯 **Focus**: Building scalable web applications, robust backend systems, RESTful APIs, database modeling, and production-ready server infrastructures.
 
 ---
