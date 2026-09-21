@@ -38,7 +38,7 @@ export default function About() {
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon"><i className="fas fa-check-circle"></i></span>
-                  <span><strong>Security &amp; Permissions:</strong> Enterprise-ready JWT, OAuth, and Role-Based Access Control (RBAC).</span>
+                  <span><strong>Security, Auth &amp; Data Protection:</strong> Granular RBAC, JWT &amp; OAuth 2.0, Bcrypt hashing, API rate limiting, CORS/Helmet headers, input sanitization, and secure HMAC webhook verification.</span>
                 </div>
                 <div className="highlight-item">
                   <span className="highlight-icon"><i className="fas fa-check-circle"></i></span>

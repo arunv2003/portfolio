@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 110px 6% 80px 6%;
+  padding: 95px 6% 35px 6%;
   position: relative;
   overflow: visible;
   background: radial-gradient(circle at 80% 20%, rgba(99, 102, 241, 0.12) 0%, rgba(11, 15, 23, 0) 50%),
@@ -514,7 +514,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 50% 12%;
+  object-position: center;
   display: block;
 }
 
@@ -820,7 +820,7 @@
 
 @media (max-width: 600px) {
   .greet-main {
-    padding: 85px 4% 45px 4%;
+    padding: 75px 4% 25px 4%;
   }
 
   .greeting-container {

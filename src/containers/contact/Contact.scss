@@ -1,7 +1,7 @@
 @import "../../_globalColor";
 
 .contact-section {
-  padding: 90px 6%;
+  padding: 45px 6%;
   background: #0b0f17;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   position: relative;
@@ -389,7 +389,7 @@ input.form-input {
 
 @media (max-width: 600px) {
   .contact-section {
-    padding: 55px 4%;
+    padding: 32px 4%;
   }
   .contact-info-panel, .contact-form-card {
     padding: 22px 16px;

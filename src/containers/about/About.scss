@@ -1,7 +1,7 @@
 @import "../../_globalColor";
 
 .about-section {
-  padding: 90px 6%;
+  padding: 45px 6%;
   background: #0d121c;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -14,7 +14,7 @@
 
 .section-header {
   text-align: center;
-  margin-bottom: 54px;
+  margin-bottom: 32px;
 }
 
 .section-eyebrow {
@@ -262,7 +262,7 @@
 
 @media (max-width: 600px) {
   .about-section {
-    padding: 55px 4%;
+    padding: 32px 4%;
   }
   .about-narrative-card {
     padding: 20px 16px;

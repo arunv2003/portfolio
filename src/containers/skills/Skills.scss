@@ -1,7 +1,7 @@
 @import "../../_globalColor";
 
 .skills-command-center {
-  padding: 95px 5%;
+  padding: 45px 5%;
   background: #090d16;
   position: relative;
   overflow: hidden;
@@ -16,7 +16,7 @@
    INFINITE MARQUEE TICKER
    ========================================= */
 .tech-marquee-wrapper {
-  margin: 0 auto 50px auto;
+  margin: 0 auto 30px auto;
   overflow: hidden;
   position: relative;
   max-width: 1200px;
@@ -741,7 +741,7 @@
 
 @media (max-width: 640px) {
   .skills-command-center {
-    padding: 55px 4%;
+    padding: 32px 4%;
   }
 
   .console-body {

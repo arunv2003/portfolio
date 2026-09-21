@@ -189,6 +189,7 @@ module.exports = { verifyRazorpayWebhook };`
     { name: "TypeScript", icon: "devicon-typescript-plain colored" },
     { name: "MySQL", icon: "devicon-mysql-plain colored" },
     { name: "MongoDB", icon: "devicon-mongodb-plain colored" },
+    { name: "Sequelize ORM", icon: "devicon-sequelize-plain colored" },
     { name: "Drizzle ORM", icon: "fas fa-database", isFa: true },
     { name: "Next.js", icon: "devicon-nextjs-plain" },
     { name: "Redis", icon: "devicon-redis-plain colored" },

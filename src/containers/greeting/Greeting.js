@@ -40,12 +40,12 @@ export default function Greeting() {
               </div>
               <div className="profile-card-stats">
                 <div className="profile-stat">
-                  <span className="stat-num">3+</span>
+                  <span className="stat-num">2+</span>
                   <span className="stat-lbl">Years Exp</span>
                 </div>
                 <div className="profile-stat-divider"></div>
                 <div className="profile-stat">
-                  <span className="stat-num">10+</span>
+                  <span className="stat-num">6+</span>
                   <span className="stat-lbl">Projects</span>
                 </div>
                 <div className="profile-stat-divider"></div>
@@ -202,7 +202,7 @@ export default function Greeting() {
                       $ pm2 reload ecosystem.config.js --env production{"\n"}
                       $ docker compose -f docker-compose.prod.yml up -d{"\n\n"}
                       <span className="token-string">[✓] Redis Cache Connected :6379</span>{"\n"}
-                      <span className="token-string">[✓] PostgreSQL / MongoDB Pools Online</span>{"\n"}
+                      <span className="token-string">[✓] MySQL / PostgreSQL / MongoDB Pools Online</span>{"\n"}
                       <span className="token-string">[✓] Zero Downtime Deployment: SUCCESS</span>
                     </code>
                   </pre>
@@ -226,7 +226,7 @@ export default function Greeting() {
               <i className="fab fa-node-js colored"></i> Node.js &amp; Express
             </div>
             <div className="floating-badge badge-2">
-              <i className="devicon-mongodb-plain colored"></i> MongoDB &amp; PostgreSQL
+              <i className="devicon-mysql-plain colored"></i> MySQL, MongoDB &amp; PostgreSQL
             </div>
             <div className="floating-badge badge-3">
               <i className="devicon-react-original colored"></i> Next.js &amp; React

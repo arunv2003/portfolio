@@ -1,7 +1,7 @@
 @import "../../_globalColor";
 
 .projects-section {
-  padding: 90px 6%;
+  padding: 45px 6%;
   background: #0b0f17;
   position: relative;
 }
@@ -295,7 +295,7 @@
 
 @media (max-width: 600px) {
   .projects-section {
-    padding: 55px 4%;
+    padding: 32px 4%;
   }
   .modern-project-card {
     padding: 20px 16px;
@@ -314,7 +314,7 @@
 
 @media (max-width: 380px) {
   .projects-section {
-    padding: 50px 3%;
+    padding: 26px 3%;
   }
   .modern-project-card {
     padding: 16px 12px;

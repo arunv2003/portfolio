@@ -119,6 +119,7 @@ const skillsSection = {
         { name: "MongoDB", iconClass: "devicon-mongodb-plain colored" },
         { name: "MySQL", iconClass: "devicon-mysql-plain colored" },
         { name: "PostgreSQL", iconClass: "devicon-postgresql-plain colored" },
+        { name: "Sequelize", iconClass: "devicon-sequelize-plain colored" },
         { name: "Drizzle ORM", iconClass: "fas fa-database" },
         { name: "Redis", iconClass: "devicon-redis-plain colored" }
       ]
