@@ -79,8 +79,7 @@ export default function Greeting() {
               </a>
               <a
                 href="/Arunverma.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
+                download="Arun_Kumar_Verma_Resume.pdf"
                 className="btn btn-outline"
               >
                 <i className="fas fa-download"></i> Resume

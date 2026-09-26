@@ -108,8 +108,7 @@ function Header() {
           <li className="nav-actions">
             <a
               href="/Arunverma.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
+              download="Arun_Kumar_Verma_Resume.pdf"
               className="nav-resume-btn"
               onClick={closeMenu}
             >
