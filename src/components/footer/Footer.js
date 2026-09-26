@@ -8,6 +8,7 @@ export default function Footer() {
   const {isDark} = useContext(StyleContext);
   const currentYear = new Date().getFullYear();
 
+  
   return (
     <Fade bottom duration={800} distance="10px">
       <footer className={`modern-footer ${isDark ? "dark-footer" : "light-footer"}`}>
