@@ -82,7 +82,7 @@ export default function Greeting() {
 
               <div className="cta-group cta-resume-group">
                 <a
-                  href="/Arun_Kumar_Verma_Resume.pdf"
+                  href="https://docs.google.com/document/d/1w6vn8AO222_DwfmGXMvJ7NJAmX7txl172ux-JQ9O-KQ/edit?tab=t.0"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"
@@ -91,7 +91,7 @@ export default function Greeting() {
                 </a>
 
                 <a
-                  href="/Arun_Kumar_Verma_Resume.pdf"
+                  href="https://docs.google.com/document/d/1w6vn8AO222_DwfmGXMvJ7NJAmX7txl172ux-JQ9O-KQ/edit?tab=t.0"
                   download="Arun_Kumar_Verma_Resume.pdf"
                   className="btn btn-download"
                 >
