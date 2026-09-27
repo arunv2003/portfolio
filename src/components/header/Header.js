@@ -1,11 +1,11 @@
-import React, {useContext, useState, useEffect} from "react";
+import React, { useContext, useState, useEffect } from "react";
 import "./Header.scss";
 import ToggleSwitch from "../ToggleSwitch/ToggleSwitch";
 import StyleContext from "../../contexts/StyleContext";
-import {greeting, socialMediaLinks} from "../../portfolio";
+import { greeting, socialMediaLinks } from "../../portfolio";
 
 function Header() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
   const [isScrolled, setIsScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -30,90 +30,104 @@ function Header() {
 
   return (
     <header
-      className={`${isDark ? "dark-menu header header-fixed" : "header header-fixed"} ${
-        isScrolled ? "header-scrolled" : ""
-      } ${menuOpen ? "menu-is-open" : ""}`}
+      className={`${isDark ? "dark-menu header header-fixed" : "header header-fixed"} ${isScrolled ? "header-scrolled" : ""
+        } ${menuOpen ? "menu-is-open" : ""}`}
     >
-        <a href="#greeting" className="logo" onClick={closeMenu}>
-          <span className="code-bracket">&lt;</span>
-          <span className="logo-name">{greeting.username}</span>
-          <span className="code-bracket">/&gt;</span>
-          <span className="status-badge" title="Available for hire">
-            <span className="status-dot"></span>
-          </span>
-        </a>
+      <a href="#greeting" className="logo" onClick={closeMenu}>
+        <span className="code-bracket">&lt;</span>
+        <span className="logo-name">{greeting.username}</span>
+        <span className="code-bracket">/&gt;</span>
+        <span className="status-badge" title="Available for hire">
+          <span className="status-dot"></span>
+        </span>
+      </a>
 
-        <input
-          className="menu-btn"
-          type="checkbox"
-          id="menu-btn"
-          checked={menuOpen}
-          onChange={e => setMenuOpen(e.target.checked)}
-          aria-label="Toggle navigation menu"
+      <input
+        className="menu-btn"
+        type="checkbox"
+        id="menu-btn"
+        checked={menuOpen}
+        onChange={e => setMenuOpen(e.target.checked)}
+        aria-label="Toggle navigation menu"
+      />
+      <label
+        className="menu-icon"
+        htmlFor="menu-btn"
+        aria-label="Navigation Menu"
+        aria-expanded={menuOpen}
+      >
+        <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
+      </label>
+
+      {menuOpen && (
+        <div
+          className="mobile-backdrop"
+          onClick={closeMenu}
+          aria-hidden="true"
         />
-        <label
-          className="menu-icon"
-          htmlFor="menu-btn"
-          aria-label="Navigation Menu"
-          aria-expanded={menuOpen}
-        >
-          <span className={isDark ? "navicon navicon-dark" : "navicon"}></span>
-        </label>
-
-        {menuOpen && (
-          <div
-            className="mobile-backdrop"
-            onClick={closeMenu}
-            aria-hidden="true"
-          />
-        )}
+      )}
 
 
-        <ul className={`${isDark ? "dark-menu menu" : "menu"}`}>
-          <li>
-            <a href="#greeting" onClick={closeMenu}>
-              Home
+      <ul className={`${isDark ? "dark-menu menu" : "menu"}`}>
+        <li>
+          <a href="#greeting" onClick={closeMenu}>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="#about" onClick={closeMenu}>
+            About
+          </a>
+        </li>
+        <li>
+          <a href="#skills" onClick={closeMenu}>
+            Skills
+          </a>
+        </li>
+        <li>
+          <a href="#architecture" onClick={closeMenu}>
+            Architecture
+          </a>
+        </li>
+        <li>
+          <a href="#projects" onClick={closeMenu}>
+            Projects
+          </a>
+        </li>
+        <li>
+          <a href="#experience" onClick={closeMenu}>
+            Experience
+          </a>
+        </li>
+        <li>
+          <a href="#contact" onClick={closeMenu}>
+            Contact
+          </a>
+        </li>
+        <li className="nav-actions">
+          <div className="nav-resume-group">
+            <a
+              href="/Arunverma.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav-resume-btn"
+              onClick={closeMenu}
+              title="Open Resume in new tab"
+            >
+              <i className="fas fa-file-pdf"></i> View Resume
             </a>
-          </li>
-          <li>
-            <a href="#about" onClick={closeMenu}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#skills" onClick={closeMenu}>
-              Skills
-            </a>
-          </li>
-          <li>
-            <a href="#architecture" onClick={closeMenu}>
-              Architecture
-            </a>
-          </li>
-          <li>
-            <a href="#projects" onClick={closeMenu}>
-              Projects
-            </a>
-          </li>
-          <li>
-            <a href="#experience" onClick={closeMenu}>
-              Experience
-            </a>
-          </li>
-          <li>
-            <a href="#contact" onClick={closeMenu}>
-              Contact
-            </a>
-          </li>
-          <li className="nav-actions">
+
             <a
               href="/Arunverma.pdf"
               download="Arun_Kumar_Verma_Resume.pdf"
-              className="nav-resume-btn"
+              className="nav-download-btn"
               onClick={closeMenu}
+              title="Download Resume PDF"
             >
-              <i className="fas fa-file-download"></i> Resume
+              <i className="fas fa-download"></i> Download Resume
             </a>
+          </div>
+          <div className="nav-extras">
             <a
               href={socialMediaLinks.github}
               target="_blank"
@@ -127,9 +141,10 @@ function Header() {
             <div className="theme-toggle-wrapper">
               <ToggleSwitch />
             </div>
-          </li>
-        </ul>
-      </header>
+          </div>
+        </li>
+      </ul>
+    </header>
   );
 }
 

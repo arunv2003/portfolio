@@ -1,11 +1,11 @@
-import React, {useContext, useState} from "react";
-import {Fade} from "react-reveal";
+import React, { useContext, useState } from "react";
+import { Fade } from "react-reveal";
 import "./Greeting.scss";
-import {greeting, socialMediaLinks} from "../../portfolio";
+import { greeting, socialMediaLinks } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Greeting() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
   const [activeTab, setActiveTab] = useState("api");
 
   if (!greeting.displayGreeting) {
@@ -71,23 +71,36 @@ export default function Greeting() {
             </p>
 
             <div className="hero-cta-buttons">
-              <a href="#projects" className="btn btn-primary">
-                <i className="fas fa-layer-group"></i> View Projects
-              </a>
-              <a href="#contact" className="btn btn-secondary">
-                <i className="fas fa-envelope"></i> Contact Me
-              </a>
-              <a
-                href="/Arunverma.pdf"
-                download="Arun_Kumar_Verma_Resume.pdf"
-                className="btn btn-outline"
-              >
-                <i className="fas fa-download"></i> Resume
-              </a>
+              <div className="cta-group cta-main-group">
+                <a href="#projects" className="btn btn-primary">
+                  <i className="fas fa-layer-group"></i> View Projects
+                </a>
+                <a href="#contact" className="btn btn-secondary">
+                  <i className="fas fa-envelope"></i> Contact Me
+                </a>
+              </div>
+
+              <div className="cta-group cta-resume-group">
+                <a
+                  href="/Arunverma.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline"
+                >
+                  <i className="fas fa-file-pdf"></i> View Resume
+                </a>
+
+                <a
+                  href="/Arunverma.pdf"
+                  download="Arun_Kumar_Verma_Resume.pdf"
+                  className="btn btn-download"
+                >
+                  <i className="fas fa-download"></i> Download Resume
+                </a>
+              </div>
             </div>
 
             <div className="hero-socials">
-              <span className="social-label">Connect:</span>
               <a
                 href={socialMediaLinks.github}
                 target="_blank"
@@ -160,16 +173,16 @@ export default function Greeting() {
                       <span className="token-keyword">import</span> &#123; HotelService &#125; <span className="token-keyword">from</span> <span className="token-string">'./services/hotel'</span>;{"\n\n"}
                       <span className="token-comment">{"// Full Stack REST API Endpoint"}</span>{"\n"}
                       router.<span className="token-function">post</span>(
-                        <span className="token-string">'/api/v1/bookings'</span>,{"\n"}
-                        verifyToken,{"\n"}
-                        authorizeRole([<span className="token-string">'ADMIN'</span>, <span className="token-string">'MANAGER'</span>]),{"\n"}
-                        <span className="token-keyword">async</span> (req: Request, res: Response) =&gt; &#123;{"\n"}
-                        {"  "}<span className="token-keyword">const</span> result = <span className="token-keyword">await</span> HotelService.<span className="token-function">createBooking</span>(req.body);{"\n"}
-                        {"  "}<span className="token-keyword">return</span> res.<span className="token-function">status</span>(201).<span className="token-function">json</span>(&#123;{"\n"}
-                        {"    "}success: <span className="token-boolean">true</span>,{"\n"}
-                        {"    "}data: result,{"\n"}
-                        {"    "}gateway: <span className="token-string">'Razorpay_Verified'</span>{"\n"}
-                        {"  "}&#125;);{"\n"}
+                      <span className="token-string">'/api/v1/bookings'</span>,{"\n"}
+                      verifyToken,{"\n"}
+                      authorizeRole([<span className="token-string">'ADMIN'</span>, <span className="token-string">'MANAGER'</span>]),{"\n"}
+                      <span className="token-keyword">async</span> (req: Request, res: Response) =&gt; &#123;{"\n"}
+                      {"  "}<span className="token-keyword">const</span> result = <span className="token-keyword">await</span> HotelService.<span className="token-function">createBooking</span>(req.body);{"\n"}
+                      {"  "}<span className="token-keyword">return</span> res.<span className="token-function">status</span>(201).<span className="token-function">json</span>(&#123;{"\n"}
+                      {"    "}success: <span className="token-boolean">true</span>,{"\n"}
+                      {"    "}data: result,{"\n"}
+                      {"    "}gateway: <span className="token-string">'Razorpay_Verified'</span>{"\n"}
+                      {"  "}&#125;);{"\n"}
                       &#125;);
                     </code>
                   </pre>
