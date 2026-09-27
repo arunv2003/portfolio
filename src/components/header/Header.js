@@ -107,18 +107,16 @@ function Header() {
         <li className="nav-actions">
           <div className="nav-resume-group">
             <a
-              href="/Arunverma.pdf"
+              href="/Arun_Kumar_Verma_Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-resume-btn"
+              className="nav-download-btn"
               onClick={closeMenu}
-              title="Open Resume in new tab"
             >
               <i className="fas fa-file-pdf"></i> View Resume
             </a>
-
             <a
-              href="/Arunverma.pdf"
+              href="/Arun_Kumar_Verma_Resume.pdf"
               download="Arun_Kumar_Verma_Resume.pdf"
               className="nav-download-btn"
               onClick={closeMenu}

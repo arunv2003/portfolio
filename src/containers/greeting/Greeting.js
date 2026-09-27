@@ -82,7 +82,7 @@ export default function Greeting() {
 
               <div className="cta-group cta-resume-group">
                 <a
-                  href="/Arunverma.pdf"
+                  href="/Arun_Kumar_Verma_Resume.pdf"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn-outline"
@@ -91,7 +91,7 @@ export default function Greeting() {
                 </a>
 
                 <a
-                  href="/Arunverma.pdf"
+                  href="/Arun_Kumar_Verma_Resume.pdf"
                   download="Arun_Kumar_Verma_Resume.pdf"
                   className="btn btn-download"
                 >
