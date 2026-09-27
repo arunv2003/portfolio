@@ -23,9 +23,9 @@ const greeting = {
   badge: "Available for Full Stack & Backend Projects",
   subTitle:
     "Full Stack Developer specializing in building scalable web applications, robust backend systems, REST APIs, database-driven applications, and production-ready solutions.",
-  resumeLink: "/Arunverma.pdf",
+  resumeLink: "/Arun_Kumar_Verma_Resume.pdf",
   resumeDriveBackup:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing",
+    "https://docs.google.com/document/d/1w6vn8AO222_DwfmGXMvJ7NJAmX7txl172ux-JQ9O-KQ/edit?tab=t.0",
   displayGreeting: true
 };
 
@@ -79,7 +79,7 @@ const skillsSection = {
   title: "Technical Skills & Technologies",
   subTitle:
     "A comprehensive toolset for architecting, building, and deploying modern full-stack web applications.",
-  
+
   categories: [
     {
       name: "Frontend",
