@@ -107,16 +107,17 @@ function Header() {
         <li className="nav-actions">
           <div className="nav-resume-group">
             <a
-              href="https://docs.google.com/document/d/1w6vn8AO222_DwfmGXMvJ7NJAmX7txl172ux-JQ9O-KQ/edit?tab=t.0"
+              href={greeting.resumeDriveBackup}
               target="_blank"
               rel="noopener noreferrer"
-              className="nav-download-btn"
+              className="nav-resume-btn"
               onClick={closeMenu}
+              title="Open Resume in new tab"
             >
               <i className="fas fa-file-pdf"></i> View Resume
             </a>
             <a
-              href="https://docs.google.com/document/d/1w6vn8AO222_DwfmGXMvJ7NJAmX7txl172ux-JQ9O-KQ/edit?tab=t.0"
+              href={greeting.resumeLink || "/Arun_Kumar_Verma_Resume.pdf"}
               download="Arun_Kumar_Verma_Resume.pdf"
               className="nav-download-btn"
               onClick={closeMenu}
