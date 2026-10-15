@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import "./StartupProjects.scss";
+import ProjectImageSlider from "./ProjectImageSlider";
 import {bigProjects} from "../../portfolio";
 import {Fade} from "react-reveal";
 import StyleContext from "../../contexts/StyleContext";
@@ -43,21 +44,12 @@ export default function StartupProject() {
                   <h3 className="project-heading">{project.projectName}</h3>
                   <p className="project-summary">{project.projectDesc}</p>
 
-                  {/* Main Features */}
-                  {project.features && (
-                    <div className="features-list-wrapper">
-                      <h4 className="features-subheading">
-                        <i className="fas fa-check-double"></i> Key Features:
-                      </h4>
-                      <ul className="features-list">
-                        {project.features.map((feature, fIdx) => (
-                          <li key={fIdx} className="feature-item">
-                            <span className="bullet-icon">▸</span>
-                            <span>{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  {/* Project Image Slider / Auto-scroller */}
+                  {project.images && project.images.length > 0 && (
+                    <ProjectImageSlider
+                      images={project.images}
+                      projectName={project.projectName}
+                    />
                   )}
 
                   {/* Tech Stack Pills */}

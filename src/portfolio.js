@@ -232,8 +232,30 @@ const bigProjects = {
     {
       projectName: "Hotel Management System (Chacha Vatiza Hotels)",
       badge: "Hospitality Cloud Platform",
-      projectDesc:
-        "High-performance cloud operating system for hotels automating front desk reservations, guest billing, multi-property revenue management, and live housekeeping operations.",
+      // projectDesc:
+      //   "High-performance cloud operating system for hotels automating front desk reservations, guest billing, multi-property revenue management, and live housekeeping operations.",
+      images: [
+        {
+          url: "/images/projects/chacha-vatiza/hotel_hero.png",
+          caption: "Hero & High-Performance Hospitality Cloud OS"
+        },
+        {
+          url: "/images/projects/chacha-vatiza/hotel_dashboard.png",
+          caption: "Real-time SaaS Admin & Revenue Analytics Dashboard"
+        },
+        {
+          url: "/images/projects/chacha-vatiza/hotel_features.png",
+          caption: "Front Desk, Housekeeping & Centralized Operations Grid"
+        },
+        {
+          url: "/images/projects/chacha-vatiza/hotel_pricing.png",
+          caption: "Transparent Multi-tier SaaS Subscription Plans"
+        },
+        {
+          url: "/images/projects/chacha-vatiza/hotel_reviews.png",
+          caption: "Verified Hotelier Testimonials & Trust Validation"
+        }
+      ],
       techStack: [
         "React",
         "Next.js",
@@ -242,17 +264,6 @@ const bigProjects = {
         "MongoDB",
         "Tailwind CSS",
         "Razorpay"
-      ],
-      features: [
-        "Hotel onboarding & multi-property dashboard",
-        "Employee management & role permissions (RBAC)",
-        "Real-time room booking engine & reservation calendar",
-        "Integrated Razorpay payment processing & invoicing",
-        "Restaurant management & Point of Sale (POS)",
-        "Housekeeping workflows & real-time room status",
-        "Inventory tracking & automated low-stock alerts",
-        "Staff payroll, business reports & revenue analytics",
-        "Discount coupon engine & guest announcements"
       ],
       footerLink: [
         {
@@ -270,8 +281,26 @@ const bigProjects = {
     {
       projectName: "Nutflix - Premium Dry Fruits Platform",
       badge: "Production Commercial Platform",
-      projectDesc:
-        "Live commercial e-commerce platform for premium dry fruits and artisanal Tanzanian produce, featuring online store ordering, franchise partner onboarding, and logistics delivery.",
+      // projectDesc:
+      //  "Live commercial e-commerce platform for premium dry fruits and artisanal Tanzanian produce, featuring online store ordering, franchise partner onboarding, and logistics delivery.",
+      images: [
+        {
+          url: "/images/projects/nutflix/nutclick_hero.png",
+          caption: "Storefront Hero & Tanzanian Artisanal Produce"
+        },
+        {
+          url: "/images/projects/nutflix/nutclick_products.png",
+          caption: "Interactive Product Catalog & Dynamic Pricing"
+        },
+        {
+          url: "/images/projects/nutflix/nutclick_about.png",
+          caption: "Quality, Freshness & Direct Sourcing Value"
+        },
+        {
+          url: "/images/projects/nutflix/nutclick_dashboard.png",
+          caption: "Admin Sales Revenue & Order Fulfillment Dashboard"
+        }
+      ],
       techStack: [
         "React.js",
         "Node.js",
@@ -280,15 +309,6 @@ const bigProjects = {
         "Drizzle ORM",
         "Tailwind CSS",
         "REST APIs"
-      ],
-      features: [
-        "Relational schema modeling & type-safe queries using MySQL and Drizzle ORM",
-        "Full product catalog with dynamic categories, search & sorting",
-        "Online ordering pipeline with cart management & checkout",
-        "Franchise opportunity onboarding portal with commission tracking",
-        "WhatsApp instant ordering & direct customer support integration",
-        "Admin dashboard for product catalog, pricing & inventory sync",
-        "Pan-India delivery integration and real-time order notifications"
       ],
       footerLink: [
         {
@@ -304,25 +324,33 @@ const bigProjects = {
       ]
     },
     {
-      projectName: "Full Stack E-Commerce & Gadget Store",
-      badge: "Electronics & Gadget Marketplace",
-      projectDesc:
-        "Feature-rich digital marketplace with real-time product search, dynamic categories (AirPods, Smartwatches, Audio), user authentication, cart management, and online checkout.",
+      projectName: "Green Garden - Residential Society Management System",
+      badge: "Residential Society ERP",
+      //  projectDesc:
+      //    "Comprehensive cloud operating system for residential societies automating flat directories, resident records, security gate visitors, maintenance billing, and committee helpdesk.",
+      images: [
+        {
+          url: "/images/projects/green-garden/greengarden_dashboard.png",
+          caption: "Secretary Operations Center & Real-Time Dashboard"
+        },
+        {
+          url: "/images/projects/green-garden/greengarden_residents.png",
+          caption: "Society Residents & Flat Allocation Directory"
+        },
+        {
+          url: "/images/projects/green-garden/greengarden_master.png",
+          caption: "Society Master & Tower / Block Architecture"
+        }
+      ],
       techStack: [
         "React.js",
+        "Next.js",
         "Node.js",
         "Express.js",
-        "MongoDB",
-        "Redux",
+        "MySQL",
+        "Drizzle ORM",
         "Tailwind CSS",
-        "Vercel"
-      ],
-      features: [
-        "Live product search bar with instant search query filtering",
-        "Dynamic category carousels (Top AirPods, Bestselling Smartwatches)",
-        "Secure user authentication (Login / Signup) and buyer profiles",
-        "Shopping cart state persistence and checkout workflow",
-        "Mobile-first responsive design with fast single-page app (SPA) performance"
+        "REST APIs"
       ],
       footerLink: [
         {
@@ -332,7 +360,7 @@ const bigProjects = {
         },
         {
           name: "Live Demo",
-          url: "https://e-commerce-frontend-ruby-seven.vercel.app/",
+          url: "https://green-garden.arunverma.online/",
           icon: "fas fa-external-link-alt"
         }
       ]
@@ -340,8 +368,22 @@ const bigProjects = {
     {
       projectName: "Krishna Shop - E-Commerce Store",
       badge: "Modern E-Commerce Store",
-      projectDesc:
-        "Fast, interactive online shopping application built with React and Vite, featuring smooth product browsing, category filtering, cart management, and seamless mobile checkout.",
+      //  projectDesc:
+      //   "Fast, interactive online shopping application built with React and Vite, featuring smooth product browsing, category filtering, cart management, and seamless mobile checkout.",
+      images: [
+        {
+          url: "/images/projects/krishna-shop/forever_hero.png",
+          caption: "Storefront Hero & Latest Fashion Arrivals"
+        },
+        {
+          url: "/images/projects/krishna-shop/forever_collection.png",
+          caption: "Latest Collections & Dynamic Product Grid"
+        },
+        {
+          url: "/images/projects/krishna-shop/forever_auth.png",
+          caption: "Secure Customer Registration & Authentication"
+        }
+      ],
       techStack: [
         "React.js",
         "Vite",
@@ -349,13 +391,6 @@ const bigProjects = {
         "Tailwind CSS",
         "REST APIs",
         "Vercel"
-      ],
-      features: [
-        "Instant product browsing and category-based filtering",
-        "Interactive product cards with pricing and stock details",
-        "Client-side cart management with real-time price calculation",
-        "Ultra-fast page loads and optimized asset bundles powered by Vite",
-        "Clean, responsive UI tailored for mobile, tablet, and desktop shoppers"
       ],
       footerLink: [
         {
@@ -382,7 +417,7 @@ const workExperiences = {
       role: "Full Stack Developer",
       company: "Namami Infotech India Pvt. Ltd.",
       location: "Okhla Phase 1, New Delhi, India",
-      date: "April 2025 – Present",
+      date: "July 2025 – Present",
       desc: "Architecting and developing full-stack web applications, business platforms, and backend services supporting business discovery and customer engagement.",
       descBullets: [
         "Contributed to core production projects including 'Nut-flix.in' and 'Society Management System' using MERN stack and Next.js.",
