@@ -231,29 +231,26 @@ const bigProjects = {
   projects: [
     {
       projectName: "Hotel Management System (Chacha Vatiza Hotels)",
-      badge: "Hospitality Cloud Platform",
+
       // projectDesc:
       //   "High-performance cloud operating system for hotels automating front desk reservations, guest billing, multi-property revenue management, and live housekeeping operations.",
       images: [
         {
           url: "/images/projects/chacha-vatiza/hotel_hero.png",
-          caption: "Hero & High-Performance Hospitality Cloud OS"
+
         },
         {
           url: "/images/projects/chacha-vatiza/hotel_dashboard.png",
-          caption: "Real-time SaaS Admin & Revenue Analytics Dashboard"
+
         },
         {
           url: "/images/projects/chacha-vatiza/hotel_features.png",
-          caption: "Front Desk, Housekeeping & Centralized Operations Grid"
         },
         {
           url: "/images/projects/chacha-vatiza/hotel_pricing.png",
-          caption: "Transparent Multi-tier SaaS Subscription Plans"
         },
         {
           url: "/images/projects/chacha-vatiza/hotel_reviews.png",
-          caption: "Verified Hotelier Testimonials & Trust Validation"
         }
       ],
       techStack: [
@@ -280,25 +277,22 @@ const bigProjects = {
     },
     {
       projectName: "Nutflix - Premium Dry Fruits Platform",
-      badge: "Production Commercial Platform",
+
       // projectDesc:
       //  "Live commercial e-commerce platform for premium dry fruits and artisanal Tanzanian produce, featuring online store ordering, franchise partner onboarding, and logistics delivery.",
       images: [
         {
           url: "/images/projects/nutflix/nutclick_hero.png",
-          caption: "Storefront Hero & Tanzanian Artisanal Produce"
+
         },
         {
           url: "/images/projects/nutflix/nutclick_products.png",
-          caption: "Interactive Product Catalog & Dynamic Pricing"
         },
         {
           url: "/images/projects/nutflix/nutclick_about.png",
-          caption: "Quality, Freshness & Direct Sourcing Value"
         },
         {
           url: "/images/projects/nutflix/nutclick_dashboard.png",
-          caption: "Admin Sales Revenue & Order Fulfillment Dashboard"
         }
       ],
       techStack: [
@@ -325,21 +319,17 @@ const bigProjects = {
     },
     {
       projectName: "Green Garden - Residential Society Management System",
-      badge: "Residential Society ERP",
       //  projectDesc:
       //    "Comprehensive cloud operating system for residential societies automating flat directories, resident records, security gate visitors, maintenance billing, and committee helpdesk.",
       images: [
         {
           url: "/images/projects/green-garden/greengarden_dashboard.png",
-          caption: "Secretary Operations Center & Real-Time Dashboard"
         },
         {
           url: "/images/projects/green-garden/greengarden_residents.png",
-          caption: "Society Residents & Flat Allocation Directory"
         },
         {
           url: "/images/projects/green-garden/greengarden_master.png",
-          caption: "Society Master & Tower / Block Architecture"
         }
       ],
       techStack: [
@@ -367,21 +357,18 @@ const bigProjects = {
     },
     {
       projectName: "Krishna Shop - E-Commerce Store",
-      badge: "Modern E-Commerce Store",
+
       //  projectDesc:
       //   "Fast, interactive online shopping application built with React and Vite, featuring smooth product browsing, category filtering, cart management, and seamless mobile checkout.",
       images: [
         {
           url: "/images/projects/krishna-shop/forever_hero.png",
-          caption: "Storefront Hero & Latest Fashion Arrivals"
         },
         {
           url: "/images/projects/krishna-shop/forever_collection.png",
-          caption: "Latest Collections & Dynamic Product Grid"
         },
         {
           url: "/images/projects/krishna-shop/forever_auth.png",
-          caption: "Secure Customer Registration & Authentication"
         }
       ],
       techStack: [

@@ -16,7 +16,6 @@ export default function About() {
       <div className="about-container">
         <Fade bottom duration={800} distance="20px">
           <div className="section-header">
-            <span className="section-eyebrow">Professional Overview</span>
             <h2 className="section-title">{aboutSection.title}</h2>
             <p className="section-subtitle">{aboutSection.subtitle}</p>
           </div>
