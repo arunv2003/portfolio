@@ -61,8 +61,6 @@ export default function ProjectImageSlider({images = [], projectName = "Project"
     if (isRightSwipe) prevSlide();
   };
 
-  const currentImg = images[currentIndex];
-
   return (
     <div
       className="project-image-showcase"
