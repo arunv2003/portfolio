@@ -1,12 +1,47 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { Fade } from "react-reveal";
 import "./Greeting.scss";
 import { greeting, socialMediaLinks } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
+// Dynamic Typewriter Roles
+const roles = [
+  greeting.role, // "Full Stack Developer"
+  "MERN & Next.js Engineer",
+  "Backend & REST API Architect",
+  "Database & System Designer"
+];
+
 export default function Greeting() {
   const { isDark } = useContext(StyleContext);
   const [activeTab, setActiveTab] = useState("api");
+
+  const [roleIndex, setRoleIndex] = useState(0);
+  const [displayText, setDisplayText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentRole = roles[roleIndex];
+    let timeout;
+
+    if (!isDeleting && displayText === currentRole) {
+      timeout = setTimeout(() => setIsDeleting(true), 2200);
+    } else if (isDeleting && displayText === "") {
+      setIsDeleting(false);
+      setRoleIndex((prev) => (prev + 1) % roles.length);
+    } else {
+      const speed = isDeleting ? 35 : 75;
+      timeout = setTimeout(() => {
+        setDisplayText(
+          isDeleting
+            ? currentRole.substring(0, displayText.length - 1)
+            : currentRole.substring(0, displayText.length + 1)
+        );
+      }, speed);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, roleIndex]);
 
   if (!greeting.displayGreeting) {
     return null;
@@ -45,7 +80,7 @@ export default function Greeting() {
                 </div>
                 <div className="profile-stat-divider"></div>
                 <div className="profile-stat">
-                  <span className="stat-num">6+</span>
+                  <span className="stat-num">8+</span>
                   <span className="stat-lbl">Projects</span>
                 </div>
                 <div className="profile-stat-divider"></div>
@@ -62,7 +97,7 @@ export default function Greeting() {
 
             <div className="greeting-role">
               <span className="role-prefix">&gt; </span>
-              <span className="role-text">{greeting.role}</span>
+              <span className="role-text">{displayText || greeting.role}</span>
               <span className="typing-cursor">_</span>
             </div>
 
