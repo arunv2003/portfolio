@@ -7,7 +7,7 @@ import splashAnimation from "./assets/lottie/splashAnimation";
 const splashScreen = {
   enabled: true,
   animation: splashAnimation,
-  duration: 1200
+  duration: 1600
 };
 
 // Summary And Greeting Section
@@ -425,7 +425,7 @@ const workExperiences = {
       ]
     },
     {
-      role: "Social Media & E-Commerce Intern",
+      role: "Mern Stack Developer",
       company: "Hanumant Technology Pvt Ltd",
       location: "Aliganj, Lucknow, Uttar Pradesh",
       date: "Nov 2024 – May 2025",

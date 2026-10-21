@@ -246,9 +246,9 @@ module.exports = { verifyRazorpayWebhook };`
               <span className="dot red"></span>
               <span className="dot yellow"></span>
               <span className="dot green"></span>
-              <span className="console-prompt-text font-mono">
+              {/* <span className="console-prompt-text font-mono">
                 stack:~/arun-kumar-verma$
-              </span>
+              </span> */}
             </div>
 
             <div className="console-category-nav">
@@ -277,7 +277,6 @@ module.exports = { verifyRazorpayWebhook };`
               <div className="column-header">
                 <div className="category-meta-tag">
                   <span className={`status-pill ${activeData.badgeClass}`}>{activeData.tag}</span>
-                  <span className="pill-count font-mono">{currentCategoryObj.skills.length} Technologies</span>
                 </div>
                 <h3 className="category-heading">{activeCategory} Ecosystem</h3>
                 <p className="category-summary-desc">{activeData.summary}</p>

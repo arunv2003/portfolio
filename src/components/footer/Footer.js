@@ -54,9 +54,7 @@ export default function Footer() {
             <p className="copyright-text">
               &copy; {currentYear} {greeting.name}. All rights reserved.
             </p>
-            <p className="footer-tagline">
-              Crafted with modern React, clean architecture &amp; passion for high performance.
-            </p>
+            
           </div>
         </div>
       </footer>

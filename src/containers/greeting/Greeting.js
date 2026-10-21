@@ -71,14 +71,14 @@ export default function Greeting() {
             </p>
 
             <div className="hero-cta-buttons">
-              <div className="cta-group cta-main-group">
+              {/* <div className="cta-group cta-main-group">
                 <a href="#projects" className="btn btn-primary">
                   <i className="fas fa-layer-group"></i> View Projects
                 </a>
                 <a href="#contact" className="btn btn-secondary">
                   <i className="fas fa-envelope"></i> Contact Me
                 </a>
-              </div>
+              </div> */}
 
               <div className="cta-group cta-resume-group">
                 <a

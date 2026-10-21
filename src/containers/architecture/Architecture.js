@@ -35,9 +35,9 @@ export default function Architecture() {
         <p className="node-desc">{step.desc}</p>
 
         <div className="node-card-footer">
-          <span className="flow-badge">Step 0{step.step} of 06</span>
+          {/* <span className="flow-badge">Step 0{step.step} of 06</span> */}
           <span className="flow-arrow-icon" aria-hidden="true">
-            <i className="fas fa-arrow-right"></i>
+            <i className="fas fa-arrow-left"></i>
           </span>
         </div>
       </div>
@@ -54,10 +54,10 @@ export default function Architecture() {
             <span className="section-eyebrow">End-to-End Pipeline</span>
             <h2 className="section-title">{architectureSection.title}</h2>
             <p className="section-subtitle">{architectureSection.subtitle}</p>
-            <div className="marquee-status-pill">
+            {/* <div className="marquee-status-pill">
               <span className="pulse-dot"></span>
               <span>Continuous Pipeline • Hover to Pause</span>
-            </div>
+            </div> */}
           </div>
         </Fade>
       </div>

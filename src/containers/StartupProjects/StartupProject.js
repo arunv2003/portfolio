@@ -30,16 +30,16 @@ export default function StartupProject() {
             return (
               <Fade bottom duration={750} delay={i * 80} key={i}>
                 <div className="modern-project-card">
-                  <div className="card-top-header">
+                  {/* <div className="card-top-header">
                     <div className="project-badge">
-                      <i className="fas fa-layer-group"></i> {project.badge || "Full Stack Application"}
+                      <i className="fas fa-layer-group"></i> {project.badge }
                     </div>
                     <div className="card-controls">
                       <span className="mini-dot"></span>
                       <span className="mini-dot"></span>
                       <span className="mini-dot"></span>
                     </div>
-                  </div>
+                  </div> */}
 
                   <h3 className="project-heading">{project.projectName}</h3>
                   <p className="project-summary">{project.projectDesc}</p>

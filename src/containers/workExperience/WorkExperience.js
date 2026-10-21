@@ -41,8 +41,11 @@ export default function WorkExperience() {
                 <div className="timeline-card">
                   <div className="timeline-card-header">
                     <div>
-                      <span className="role-title">{card.role}</span>
-                      <h3 className="company-name">{card.company}</h3>
+                      <div className="role-company-wrapper">
+                         <h3 className="company-name">{card.company}</h3>
+                        <span className="role-title">{card.role}</span>
+                       
+                      </div>
                       {card.location && (
                         <span className="company-location">
                           <i className="fas fa-map-marker-alt"></i> {card.location}

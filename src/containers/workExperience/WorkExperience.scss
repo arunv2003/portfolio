@@ -1,7 +1,7 @@
 @import "../../_globalColor";
 
 .experience-section {
-  padding: 45px 6%;
+  padding: 28px 6%;
   background: #0d121c;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
@@ -59,7 +59,7 @@
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
   padding: 28px 32px;
-  margin-bottom: 36px;
+  margin-bottom: 24px;
   flex-grow: 1;
   backdrop-filter: blur(8px);
   box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.5);
@@ -79,6 +79,22 @@
   gap: 16px;
   margin-bottom: 14px;
   flex-wrap: wrap;
+}
+
+.role-company-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 6px;
+
+  .role-title {
+    margin-bottom: 0;
+  }
+
+  .company-name {
+    margin: 0;
+  }
 }
 
 .role-title {
@@ -155,8 +171,8 @@
 
 /* Education Section */
 .education-timeline-wrapper {
-  margin-top: 50px;
-  padding-top: 40px;
+  margin-top: 32px;
+  padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
@@ -333,7 +349,7 @@
 
 @media (max-width: 600px) {
   .experience-section {
-    padding: 32px 4%;
+    padding: 22px 4%;
   }
   .timeline-item {
     gap: 14px;
@@ -346,7 +362,7 @@
   }
   .timeline-card {
     padding: 18px 14px;
-    margin-bottom: 24px;
+    margin-bottom: 18px;
     border-radius: 14px;
   }
   .company-name {

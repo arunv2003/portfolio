@@ -80,12 +80,12 @@ export default function ProjectImageSlider({images = [], projectName = "Project"
           <span className="dot dot-yellow"></span>
           <span className="dot dot-green"></span>
         </div>
-        <div className="browser-url-pill">
+        {/* <div className="browser-url-pill">
           <i className="fas fa-lock"></i>
           <span className="url-text">
             {currentImg.caption || `${projectName} UI Preview`}
           </span>
-        </div>
+        </div> */}
         <div className="slider-utility-actions">
           <button
             type="button"

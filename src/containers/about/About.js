@@ -24,9 +24,9 @@ export default function About() {
         <div className="about-grid">
           <Fade left duration={800} distance="30px">
             <div className="about-narrative-card">
-              <div className="card-badge">
+              {/* <div className="card-badge">
                 <i className="fas fa-terminal"></i> Engineer Mindset
-              </div>
+              </div> */}
               <p className="narrative-text">
                 {aboutSection.description}
               </p>

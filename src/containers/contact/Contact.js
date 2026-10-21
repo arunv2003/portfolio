@@ -41,7 +41,6 @@ export default function Contact() {
       <div className="contact-container-main">
         <Fade bottom duration={800} distance="20px">
           <div className="section-header">
-            <span className="section-eyebrow">Get In Touch</span>
             <h2 className="section-title">{contactInfo.title}</h2>
             <p className="section-subtitle">{contactInfo.subtitle}</p>
           </div>
@@ -51,10 +50,10 @@ export default function Contact() {
           {/* Contact Details Card */}
           <Fade left duration={800} distance="30px">
             <div className="contact-info-panel">
-              <div className="status-pill">
+              {/* <div className="status-pill">
                 <span className="dot-green"></span>
                 <span>Open for Full-Time Roles &amp; Freelance Inquiries</span>
-              </div>
+              </div> */}
 
               <h3 className="panel-title">Let's discuss your next project</h3>
               <p className="panel-desc">
